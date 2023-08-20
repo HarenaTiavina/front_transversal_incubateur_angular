@@ -14,7 +14,7 @@ import { InscriptionComponent } from './inscription/inscription.component';
     NavComponent,
     AcceuilComponent,
     LoginComponent,
-    InscriptionComponent
+    InscriptionComponent,
   ],
   imports: [
     BrowserModule,
