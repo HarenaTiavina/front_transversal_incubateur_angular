@@ -27,9 +27,13 @@
             "styles": [
               "src/assets/css/style.css",
               "src/assets/css/bootstrap.css",
-              "src/assets/css/fonts.css"
+              "src/assets/css/fonts.css",
+              "node_modules/chart.js/dist/Chart.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/datatables.net/js/jquery.dataTables.min.js"
+            ]
           },
           "configurations": {
             "production": {
