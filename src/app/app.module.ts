@@ -12,6 +12,7 @@ import { ListProjetBackComponent } from './list-projet-back/list-projet-back.com
 import { ListTachesComponent } from './list-taches/list-taches.component';
 import { ListEtapesComponent } from './list-etapes/list-etapes.component';
 import { DetailsTachesComponent } from './details-taches/details-taches.component';
+import { CreateProjectComponent } from './create-project/create-project.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { DetailsTachesComponent } from './details-taches/details-taches.componen
     ListTachesComponent,
     ListEtapesComponent,
     DetailsTachesComponent,
+    CreateProjectComponent,
   ],
   imports: [
     BrowserModule,

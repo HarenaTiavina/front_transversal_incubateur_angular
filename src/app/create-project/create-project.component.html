@@ -1,0 +1,43 @@
+<section class="section section-md bg-gray-100">
+    <div class="container">
+      <h3 class="text-center">Crée projet</h3>
+      <div class="row justify-content-center">
+        <div class="col-lg-11 col-xl-9">
+          <!-- RD Mailform-->
+          <form class="rd-mailform rd-form" data-form-output="form-output-global" data-form-type="contact" method="post" action="#">
+            <div class="row row-x-16 row-20">
+                <div class="col-md-6">
+                    <div class="form-wrap">
+                      <input class="form-input" id="nom-projet" type="text" name="nom-projet" data-constraints="@Required">
+                      <label class="form-label" for="nom-projet">Nom projet</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-wrap">
+                      <label class="form-label" for="objectif">Objectif</label>
+                      <textarea class="form-input" id="objectif" name="objectif" data-constraints="@Required"></textarea>
+                    </div>
+                  </div>
+              <div class="col-md-6">
+                <div class="form-wrap">
+                  <input class="form-input" id="capital" type="number" name="capital" data-constraints="@Required">
+                  <label class="form-label" for="capital">Capital</label>
+                </div>
+              </div>
+              <div class="input-group col-md-6">
+                <div class="form-wrap">
+                    <label class="input-group-text" for="cdc">cahier de charge</label>
+                    <input type="file" class="form-control form-input" id="cdc">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-wrap form-button">
+                  <button class="button button-block button-primary" type="submit">Crée Projet</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
