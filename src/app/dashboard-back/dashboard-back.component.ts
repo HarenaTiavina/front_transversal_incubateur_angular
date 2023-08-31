@@ -25,7 +25,7 @@ export class DashboardBackComponent implements AfterViewInit {
       data: {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
         datasets: [{
-          label: 'Sales',
+          label: 'evolution',
           data: [12, 19, 3, 5, 2, 3, 10],
           backgroundColor: 'rgba(75, 192, 192, 0.2)',
           borderColor: 'rgba(75, 192, 192, 1)',
@@ -54,7 +54,7 @@ export class DashboardBackComponent implements AfterViewInit {
     const pieChart = new Chart(ctx, {
       type: 'pie',
       data: {
-        labels: ['Red', 'Blue', 'Yellow'],
+        labels: ['Harena', 'Tiavina', 'Hery'],
         datasets: [{
           data: [10, 20, 30],
           backgroundColor: ['red', 'blue', 'yellow']
