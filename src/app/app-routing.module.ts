@@ -9,6 +9,7 @@ import { ListEtapesComponent } from './list-etapes/list-etapes.component';
 import { ListTachesComponent } from './list-taches/list-taches.component';
 import { DetailsTachesComponent } from './details-taches/details-taches.component';
 import { CreateProjectComponent } from './create-project/create-project.component';
+import { CreateEtapesComponent } from './create-etapes/create-etapes.component';
 
 const routes: Routes = [
   { path: '', component: AcceuilComponent }, 
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'detailsEtapes/:idEtape', component: ListTachesComponent }, 
   { path: 'detailsTaches/:idTache', component: DetailsTachesComponent }, 
   { path: 'createProject/:idPersonne', component: CreateProjectComponent }, 
+  { path: 'createEtapes/:idProjet', component: CreateEtapesComponent }, 
 ];
 
 @NgModule({

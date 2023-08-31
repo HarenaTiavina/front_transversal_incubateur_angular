@@ -13,6 +13,7 @@ import { ListTachesComponent } from './list-taches/list-taches.component';
 import { ListEtapesComponent } from './list-etapes/list-etapes.component';
 import { DetailsTachesComponent } from './details-taches/details-taches.component';
 import { CreateProjectComponent } from './create-project/create-project.component';
+import { CreateEtapesComponent } from './create-etapes/create-etapes.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { CreateProjectComponent } from './create-project/create-project.componen
     ListEtapesComponent,
     DetailsTachesComponent,
     CreateProjectComponent,
+    CreateEtapesComponent,
   ],
   imports: [
     BrowserModule,
