@@ -7,7 +7,6 @@ import { DashboardBackComponent } from './dashboard-back/dashboard-back.componen
 import { ListProjetBackComponent } from './list-projet-back/list-projet-back.component';
 import { ListEtapesComponent } from './list-etapes/list-etapes.component';
 import { ListTachesComponent } from './list-taches/list-taches.component';
-import { DetailsTachesComponent } from './details-taches/details-taches.component';
 import { CreateProjectComponent } from './create-project/create-project.component';
 import { CreateEtapesComponent } from './create-etapes/create-etapes.component';
 
@@ -19,7 +18,6 @@ const routes: Routes = [
   { path: 'list_projets_back', component: ListProjetBackComponent }, 
   { path: 'detailsProjet/:idProjet', component: ListEtapesComponent }, 
   { path: 'detailsEtapes/:idEtape', component: ListTachesComponent }, 
-  { path: 'detailsTaches/:idTache', component: DetailsTachesComponent }, 
   { path: 'createProject/:idPersonne', component: CreateProjectComponent }, 
   { path: 'createEtapes/:idProjet', component: CreateEtapesComponent }, 
 ];

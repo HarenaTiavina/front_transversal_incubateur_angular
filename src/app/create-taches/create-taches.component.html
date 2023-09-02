@@ -1,0 +1,34 @@
+<section class="section section-md bg-gray-100">
+    <div class="container">
+      <h3 class="text-center">Crée étapes</h3>
+      <div class="row justify-content-center">
+        <div class="col-lg-11 col-xl-9">
+          <!-- RD Mailform-->
+          <form class="rd-mailform rd-form" data-form-output="form-output-global" data-form-type="contact" method="post" action="#">
+            <div class="row row-x-16 row-20">
+                <div class="col-md-6">
+                    <div class="form-wrap">
+                      <input class="form-input" id="nom-projet" type="text" name="nom-projet" data-constraints="@Required">
+                      <label class="form-label" for="nom-projet">Nom Tache</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-wrap">
+                      <select class="form-input" id="type-profil" type="number" data-constraints="@Required" [(ngModel)]="selectedOption" name="selectedOption">
+                        <option value="" disabled selected>Responsable</option>
+                        <option value="1">Rakoto</option>
+                        <option value="2">Rabe</option>
+                      </select>
+                    </div>
+                  </div>
+              <div class="col-md-6">
+                <div class="form-wrap form-button">
+                  <button class="button button-block button-primary" type="submit">Crée Etape</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
