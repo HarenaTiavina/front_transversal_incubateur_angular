@@ -9,17 +9,19 @@ import { ListEtapesComponent } from './list-etapes/list-etapes.component';
 import { ListTachesComponent } from './list-taches/list-taches.component';
 import { CreateProjectComponent } from './create-project/create-project.component';
 import { CreateEtapesComponent } from './create-etapes/create-etapes.component';
+import { ListEquipeComponent } from './list-equipe/list-equipe.component';
 
 const routes: Routes = [
   { path: '', component: AcceuilComponent }, 
   { path: 'login', component: LoginComponent }, 
   { path: 'subscribe', component: InscriptionComponent }, 
   { path: 'dashboard', component: DashboardBackComponent }, 
-  { path: 'list_projets_back', component: ListProjetBackComponent }, 
+  { path: 'listProjet', component: ListProjetBackComponent }, 
   { path: 'detailsProjet/:idProjet', component: ListEtapesComponent }, 
   { path: 'detailsEtapes/:idEtape', component: ListTachesComponent }, 
   { path: 'createProject/:idPersonne', component: CreateProjectComponent }, 
   { path: 'createEtapes/:idProjet', component: CreateEtapesComponent }, 
+  { path: 'listEquipe/:idProjet', component: ListEquipeComponent }, 
 ];
 
 @NgModule({
