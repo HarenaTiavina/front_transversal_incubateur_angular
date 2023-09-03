@@ -15,6 +15,7 @@ import { CreateProjectComponent } from './create-project/create-project.componen
 import { CreateEtapesComponent } from './create-etapes/create-etapes.component';
 import { CreateTachesComponent } from './create-taches/create-taches.component';
 import { ListEquipeComponent } from './list-equipe/list-equipe.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ListEquipeComponent } from './list-equipe/list-equipe.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

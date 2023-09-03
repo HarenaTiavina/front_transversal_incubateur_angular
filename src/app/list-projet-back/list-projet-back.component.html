@@ -19,37 +19,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td> <a href="detailsProjet/1">Smart Education</a></td>
-                            <td>Mise en place d'une plateforme d'éducation</td>
-                            <td>Rakoto</td>
-                            <td>15/01/2023</td>
-                            <td>100 000 ar</td>
-                            <td>Terminer</td>
-                        </tr>
-                        <tr>
-                            <td>Madagascar Vert</td>
-                            <td>Création d'un système de recyclage</td>
-                            <td>Rabe</td>
-                            <td>16/05/2023</td>
-                            <td>200 000 ar</td>
-                            <td>En cours</td>
-                        </tr>
-                        <tr>
-                            <td>Santé publique</td>
-                            <td>création d'un réseau de médecin bénévole</td>
-                            <td>Rasoa</td>
-                            <td>19/16/2023</td>
-                            <td>1 000 000 000 ar</td>
-                            <td>En cours</td>
-                        </tr>
-                        <tr>
-                            <td>Recherches scientifique</td>
-                            <td>mise en place des recherches pour l'avancer technologique</td>
-                            <td>Rakotobe</td>
-                            <td>20/07/2023</td>
-                            <td>20 000 000 000 ar</td>
-                            <td>En cours</td>
+                        <tr *ngFor="let projet of projets">
+                            <td> {{projet.nom}}</td>
+                            <td> {{projet.objectif}}</td>
+                            <td> {{projet.personne.nom}}</td>
+                            <td> {{projet.datePostule}} </td>
+                            <td> {{projet.capital}} </td>
+                            <td> {{projet.id}}</td>
                         </tr>
                     </tbody>
                 </table>
