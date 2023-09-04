@@ -20,8 +20,9 @@ export class LoginComponent {
     this.loginService.login(this.nom, this.mdp).subscribe(
       (response) => {
         console.log('Connexion réussie !', response);
-        this.authService.setCredentials(this.nom, response.profil);
-        console.log(this.authService.role);
+        this.authService.setCredentials(this.nom, response.profil, response.id);
+        console.log(sessionStorage.getItem('id'));  
+        this.authService.storeAuthentication();
         this.router.navigate(['/dashboard']);
         this.erreurConnexion = false;
       },
