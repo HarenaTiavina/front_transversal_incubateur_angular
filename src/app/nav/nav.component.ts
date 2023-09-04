@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -7,17 +8,16 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-  constructor(private authService : AuthService) {}
+  constructor(private authService : AuthService,private router: Router) {}
   userId: number | null = null;
 
   ngOnInit(): void {
-    const storedId = sessionStorage.getItem('id'); // Utilisez 'id' pour récupérer l'ID
+    const storedId = sessionStorage.getItem('id'); 
     if (storedId) {
-      this.userId = +storedId; // Convertissez la chaîne en nombre
+      this.userId = +storedId; 
     }
   }
   
-
   notConnected(): boolean {
     return this.authService.isLogged();
   }
@@ -32,5 +32,10 @@ export class NavComponent implements OnInit {
 
   hasInvestAccess(): boolean {
     return this.authService.getRole('INVEST');
+  }
+
+  logout(): void {
+    this.authService.clearAuthentication();
+    this.router.navigate(['/acceuil']);
   }
 }

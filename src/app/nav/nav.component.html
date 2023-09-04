@@ -49,7 +49,7 @@
               <ng-container *ngIf="hasInvestAccess()">
                 INVEST
               </ng-container>
-            <div class="rd-navbar-element"><a class="button button-sm button-header button-winona" href="/loggout">Se deconnecter</a></div>
+            <div (click)="logout()" class="rd-navbar-element"><a class="button button-sm button-header button-winona">Se deconnecter</a></div>
             </ng-template>  
           </div>
           <div class="rd-navbar-dummy"></div>
