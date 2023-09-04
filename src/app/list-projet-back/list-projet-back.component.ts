@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import 'datatables.net';
 import { HttpClient } from '@angular/common/http';
+import { ProjetService } from '../serviceProjet';
 
 @Component({
   selector: 'app-list-projet-back',
@@ -9,10 +10,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ListProjetBackComponent implements OnInit {
   projets: any[] = []; 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private projetService : ProjetService) {}
 
   ngOnInit(): void {
-    this.http.get<any[]>('http://localhost:8082/api/Projets').subscribe((data) => {
+    this.projetService.getAllProjets().subscribe(data => {
       this.projets = data;
     });
   }

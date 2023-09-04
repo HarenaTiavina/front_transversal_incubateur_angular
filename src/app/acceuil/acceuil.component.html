@@ -160,40 +160,34 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>@fat</td>
+              <tr *ngFor="let projet of projets">
+                <td> {{projet.id}} </td>
+                <td> {{projet.nom}} </td>
+                <td> {{projet.objectif}} </td>
+                <td> {{projet.personne.nom}} </td>
+                <td> 
+                  <div *ngIf="projet.etat == 0">
+                       <div class="card bg-info text-white shadow">
+                           <div class="card-body">
+                               en attente    
+                           </div>
+                       </div>
+                  </div> 
+                  <div *ngIf="projet.etat == 1">
+                       <div class="card bg-warning text-white shadow">
+                           <div class="card-body">
+                               en cours    
+                           </div>
+                       </div>
+                  </div> 
+                  <div *ngIf="projet.etat == 2">
+                       <div class="card bg-success text-white shadow">
+                           <div class="card-body">
+                               terminer    
+                           </div>
+                       </div>
+                  </div> 
+               </td>
               </tr>
             </tbody>
           </table>      

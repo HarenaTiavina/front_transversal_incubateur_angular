@@ -4,30 +4,30 @@
       <div class="row justify-content-center">
         <div class="col-lg-11 col-xl-9">
           <!-- RD Mailform-->
-          <form class="rd-mailform rd-form" data-form-output="form-output-global" data-form-type="contact" method="post" action="#">
+          <form (ngSubmit)="onSubmit()" class="rd-mailform rd-form" data-form-output="form-output-global" data-form-type="contact">
             <div class="row row-x-16 row-20">
                 <div class="col-md-6">
                     <div class="form-wrap">
-                      <input class="form-input" id="nom-projet" type="text" name="nom-projet" data-constraints="@Required">
-                      <label class="form-label" for="nom-projet">Nom projet</label>
+                      <input [(ngModel)]="projet.nom" class="form-input" id="nom" type="text" name="nom" data-constraints="@Required">
+                      <label class="form-label" for="nom">Nom projet</label>
                     </div>
                   </div>
                   <div class="col-12">
                     <div class="form-wrap">
                       <label class="form-label" for="objectif">Objectif</label>
-                      <textarea class="form-input" id="objectif" name="objectif" data-constraints="@Required"></textarea>
+                      <textarea [(ngModel)]="projet.objectif" class="form-input" id="objectif" name="objectif" data-constraints="@Required"></textarea>
                     </div>
                   </div>
               <div class="col-md-6">
                 <div class="form-wrap">
-                  <input class="form-input" id="capital" type="number" name="capital" data-constraints="@Required">
+                  <input [(ngModel)]="projet.capital" class="form-input" id="capital" type="number" name="capital" data-constraints="@Required">
                   <label class="form-label" for="capital">Capital</label>
                 </div>
               </div>
-              <div class="input-group col-md-6">
+              <div class="col-md-6">
                 <div class="form-wrap">
-                    <label class="input-group-text" for="cdc">cahier de charge</label>
-                    <input type="file" class="form-control form-input" id="cdc">
+                  <input [(ngModel)]="projet.cahierCharge" class="form-input" id="cahierCharge" type="url" name="cahierCharge" data-constraints="@Required">
+                  <label class="form-label" for="cahierCharge">Lien Cahier de Charge</label>
                 </div>
               </div>
               <div class="col-md-6">

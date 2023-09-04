@@ -1,5 +1,11 @@
 <div class="container-fluid">
-    <!-- DataTales Example -->
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Liste Projet</h1>
+        <a href="createProject/1" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                class="fas fa-download fa-sm text-white-50"></i> Crée projet</a>
+    </div>
+    <!-- DataTales -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Liste des Projets</h6>
@@ -13,19 +19,43 @@
                             <th>Nom</th>
                             <th>Objectif</th>
                             <th>Responsable</th>
-                            <th>Date de commencement</th>
+                            <th>Date de création</th>
                             <th>Capital</th>
+                            <th>Cahier de charge</th>
                             <th>Etat</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let projet of projets">
-                            <td> {{projet.nom}}</td>
+                            <td> <a href="detailsProjet/{{projet.id}}"> {{projet.nom}}  </a> </td>
                             <td> {{projet.objectif}}</td>
                             <td> {{projet.personne.nom}}</td>
-                            <td> {{projet.datePostule}} </td>
-                            <td> {{projet.capital}} </td>
-                            <td> {{projet.id}}</td>
+                            <td> {{projet.datePostule | date:'dd/MM/yyyy, HH:mm:ss'}} </td>
+                            <td> {{projet.capital | number}} </td>
+                            <td> <a [href]="projet.cahierCharge" >{{projet.cahierCharge}}</a> </td>
+                            <td> 
+                               <div *ngIf="projet.etat == 0">
+                                    <div class="card bg-info text-white shadow">
+                                        <div class="card-body">
+                                            en attente    
+                                        </div>
+                                    </div>
+                               </div> 
+                               <div *ngIf="projet.etat == 1">
+                                    <div class="card bg-warning text-white shadow">
+                                        <div class="card-body">
+                                            en cours    
+                                        </div>
+                                    </div>
+                               </div> 
+                               <div *ngIf="projet.etat == 2">
+                                    <div class="card bg-success text-white shadow">
+                                        <div class="card-body">
+                                            terminer    
+                                        </div>
+                                    </div>
+                               </div> 
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -34,4 +64,3 @@
     </div>
 
 </div>
-<!-- /.container-fluid -->  
